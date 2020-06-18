@@ -1,3 +1,3 @@
 # Script that displays your machine's MAC addresses
 
-ifconfig | grep ether
+ifconfig | grep "ether" | cut -d ' ' -f 2

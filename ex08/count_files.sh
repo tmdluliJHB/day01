@@ -2,8 +2,4 @@
 # files and directories in the current directory and
 # all its sub-directories
 
-FCOUNT=$(find . -type f | wc -1)
-DCOUNT=$(find . -type d | wc -1)
-
-TOTALCOUNT = FCOUNT + DCOUNT
-echo $TOTALCOUNT
+find . -not -name ".*" -or -type d | wc -l | tr -d ' 'T
